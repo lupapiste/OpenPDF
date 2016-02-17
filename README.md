@@ -1,9 +1,14 @@
 # OpenPDF is a Java PDF library, forked from the venerable iText #
 
+[![Clojars Project](http://clojars.org/lupapiste/openpdf/latest-version.svg)](http://clojars.org/lupapiste/openpdf)
+
 ## Background ##
 
 This is a fork of OpenPDF that contains changes required for PDF processing in Lupapiste. It contains changes that are not
-unambiguously fixes that should be contributed to upstream. It also includes a Leiningen project for the openpdf module.
+unambiguously fixes that should be contributed to upstream. It also includes a Leiningen project for the openpdf module which
+is deployed to Clojars.
+
+Releases are made from the branch lupapiste.
 
 ## Changes ##
 This repo has the following changes from the old "original" 4.2.0 version:
