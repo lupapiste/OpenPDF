@@ -2,10 +2,8 @@
 
 ## Background ##
 
-Beginning with version 5.0 the developers have moved to the AGPL to improve their ability to sell commercial licenses.
-I fully respect the developers' wishes and rights.  However, I also respect open-source software.  The plan is to
-keep things free and open.  One of the other intents is to boil this code down to the essentials.  Anything outside
-of creating PDF documents will be moved to an extension library.  This library is for core PDF needs and concerns.
+This is a fork of OpenPDF that contains changes required for PDF processing in Lupapiste. It contains changes that are not
+unambiguously fixes that should be contributed to upstream. It also includes a Leiningen project for the openpdf module.
 
 ## Changes ##
 This repo has the following changes from the old "original" 4.2.0 version:
@@ -18,7 +16,7 @@ This repo has the following changes from the old "original" 4.2.0 version:
  - some NPE fixes and tweaked maven support
 
 ## Contributing ##
-Release the hounds!  Please send all pull requests.
+Please contribute to the original OpenPDF repository, https://github.com/rtfarte/OpenPDF
 
 ## Dependencies ##
 
@@ -40,7 +38,7 @@ JFreeChart: - for testing graphical examples
   JCommon
   Servlet
 
+## License ##
 
+Distributed under the LGPL 3 license
 
-
-  
