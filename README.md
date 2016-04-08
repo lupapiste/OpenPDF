@@ -17,7 +17,7 @@ This repo has the following changes from the old "original" 4.2.0 version:
  - merged patch from Steven to fix NPE in XFA Form (escapeSom method)
  - merged UnembedFontPdfSmartCopy functionality from Vicente Alencar
  - merged RTF Footer functionality from ubermichael
- - compatibility fix to support the newest (1.52) bouncy castle libraries based/inspired by flex-developments fixes
+ - compatibility fix to support the newest (1.54) bouncy castle libraries based/inspired by flex-developments fixes
  - some NPE fixes and tweaked maven support
 
 ## Contributing ##
@@ -45,5 +45,8 @@ JFreeChart: - for testing graphical examples
 
 ## License ##
 
-Distributed under the LGPL 3 license
+GNU General Lesser Public License (LGPL) version 3.0 - http://www.gnu.org/licenses/lgpl.html
 
+Mozilla Public License Version 2.0 - http://www.mozilla.org/MPL/2.0/
+
+  
