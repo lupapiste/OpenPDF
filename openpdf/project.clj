@@ -1,4 +1,4 @@
-(defproject lupapiste/openpdf "1.0.2"
+(defproject lupapiste/openpdf "1.0.3"
   :description "A fork of OpenPDF, which itself is a fork of iText 4.2.1"
   :url "https://github.com/lupapiste/OpenPDF"
   :license {:name "GNU General Lesser Public License (LGPL) version 3.0"
@@ -7,9 +7,9 @@
         :tag "lupapiste"
         :url "https://github.com/lupapiste/OpenPDF.git"
         :dir "openpdf"}
-  :dependencies [[org.bouncycastle/bcprov-jdk15on "1.52"]
-                 [org.bouncycastle/bcpkix-jdk15on "1.52"]]
+  :dependencies [[org.bouncycastle/bcprov-jdk15on "1.54"]
+                 [org.bouncycastle/bcpkix-jdk15on "1.54"]]
   :java-source-paths ["src/main/java"]
   :source-paths ["src/main/java"]
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[junit "4.4"]]}})
+             :dev {:dependencies [[junit "4.12"]]}})
