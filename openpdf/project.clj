@@ -1,4 +1,4 @@
-(defproject lupapiste/openpdf "1.0.3"
+(defproject lupapiste/openpdf "1.0.4"
   :description "A fork of OpenPDF, which itself is a fork of iText 4.2.1"
   :url "https://github.com/lupapiste/OpenPDF"
   :license {:name "GNU General Lesser Public License (LGPL) version 3.0"

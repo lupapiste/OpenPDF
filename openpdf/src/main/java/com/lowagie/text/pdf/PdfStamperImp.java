@@ -214,20 +214,8 @@ class PdfStamperImp extends PdfWriter {
         int skipInfo = -1;
         PRIndirectReference iInfo = (PRIndirectReference)reader.getTrailer().get(PdfName.INFO);
         PdfDictionary oldInfo = (PdfDictionary)PdfReader.getPdfObject(iInfo);
-        String producer = null;
         if (iInfo != null)
             skipInfo = iInfo.getNumber();
-        if (oldInfo != null && oldInfo.get(PdfName.PRODUCER) != null)
-        	producer = oldInfo.getAsString(PdfName.PRODUCER).toString();
-        if (producer == null) {
-        	producer = Document.getVersion();
-        }
-        else if (producer.indexOf(Document.getProduct()) == -1) {
-        	StringBuffer buf = new StringBuffer(producer);
-        	buf.append("; modified using ");
-        	buf.append(Document.getVersion());
-        	producer = buf.toString();
-        }
         // XMP
         byte[] altMetadata = null;
         PdfObject xmpo = PdfReader.getPdfObject(catalog.get(PdfName.METADATA));
@@ -244,8 +232,6 @@ class PdfStamperImp extends PdfWriter {
         	PdfStream xmp;
         	try {
         		XmpReader xmpr = new XmpReader(altMetadata);
-        		if (!xmpr.replace("http://ns.adobe.com/pdf/1.3/", "Producer", producer))
-        			xmpr.add("rdf:Description", "http://ns.adobe.com/pdf/1.3/", "pdf:Producer", producer);
         		if (!xmpr.replace("http://ns.adobe.com/xap/1.0/", "ModifyDate", date.getW3CDate()))
         			xmpr.add("rdf:Description", "http://ns.adobe.com/xap/1.0/", "xmp:ModifyDate", date.getW3CDate());
         		xmpr.replace("http://ns.adobe.com/xap/1.0/", "MetadataDate", date.getW3CDate());
@@ -347,7 +333,6 @@ class PdfStamperImp extends PdfWriter {
             }
         }
         newInfo.put(PdfName.MODDATE, date);
-        newInfo.put(PdfName.PRODUCER, new PdfString(producer));
         if (append) {
             if (iInfo == null)
                 info = addToBody(newInfo, false).getIndirectReference();
