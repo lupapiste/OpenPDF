@@ -6,7 +6,7 @@
     <parent>
         <groupId>lupapiste</groupId>
         <artifactId>openpdf-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
 
     <artifactId>pdf-html</artifactId>
@@ -14,7 +14,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>openpdf</groupId>
+            <groupId>com.github.rtfarte</groupId>
             <artifactId>pdf-xml</artifactId>
             <version>${project.version}</version>
         </dependency>
