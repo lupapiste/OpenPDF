@@ -21,7 +21,7 @@ This repo has the following changes from the old "original" 4.2.0 version:
  - some NPE fixes and tweaked maven support
 
 ## Contributing ##
-Please contribute to the original OpenPDF repository, https://github.com/rtfarte/OpenPDF
+Please contribute to the original OpenPDF repository, https://github.com/LibrePDF/OpenPDF/
 
 ## Dependencies ##
 
